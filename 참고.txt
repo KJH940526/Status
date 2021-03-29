@@ -1,0 +1,5 @@
+https://linked2ev.github.io/tag/devlog-vue/
+
+https://www.google.com/search?q=vue++export+to+xls&sxsrf=ALeKk00OsCht2FWwg9QB7KunzppPUQIDnQ%3A1616999020669&ei=bHJhYOW_KNWmoASl9LCIAg&oq=vue++export+to+xls&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEB4yBAgAEB46CggjEK4CELADECc6BAgjECc6AggAOgQIABBDOgcIABCHAhAUOgoIABCxAxCDARBDOgUIABCxAzoHCAAQsQMQQzoHCCMQsAIQJzoECAAQDToECAAQEzoGCAAQHhATOggIABAIEB4QE1CCfFiHzQFgj84BaAlwAHgAgAF5iAG_GJIBBDIuMjeYAQCgAQGqAQdnd3Mtd2l6yAEBwAEB&sclient=gws-wiz&ved=0ahUKEwjlperh7tTvAhVVE4gKHSU6DCEQ4dUDCA0&uact=5
+
+https://kr.vuejs.org/v2/guide/forms.html#v-model-%EA%B3%BC-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8
