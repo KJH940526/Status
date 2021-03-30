@@ -39,7 +39,7 @@
 
 
 <br/>
-    <ul>
+    <!-- <ul>
         <li v-for="Item in Items"> {{ Item}}</li>
     </ul>
         asdasd
@@ -51,13 +51,16 @@
     </ul>
          <ul>
           <li v-for="Item in chart3"> {{ Item }}</li>
-    </ul>
-       
-        
+    </ul> -->
+    <div id = "app">
+    <pie-chart :data="chartData" :options="chartOptions"></pie-chart>
+    <p>통계</p>
     </div>
+</div>
 </template>
 <script>
 import data from '../data/data'
+import PieChart from './PieChart'
 
 //cctv 추가버튼을 누르면 드롭박스!!
 //드롭박스를 눌러서 cctv를 선택하면 그 값이 저장!!
@@ -65,7 +68,7 @@ import data from '../data/data'
 export default {
     name: "Status",
     components:{
-
+        PieChart
     },
     data(){
        return  {
@@ -82,7 +85,23 @@ export default {
            TimeEnd: [],   //끝난시간
            CCTVItmes: [], //CCTV 리스트
            UserItems: [], //User Item
-           
+
+           //chart.js
+           chartOptions: {
+               hoverBorderWidth: 10,
+           },
+           chartData:{
+               hoverBackgroundColor: "red",
+               hoverBorderWidth: 10,
+               labels: ["이상없음", "미처리", "오탐"],
+               datasets: [
+                   {
+                       label: "Data One",
+                       backgroundColor: ["#41B883", "#E46651", "#00D8FF"],
+                       data: [],
+                   }
+               ]
+           }
        }
     },
     created(){
@@ -107,16 +126,29 @@ export default {
         
     },
     beforeMount(){
+        // length를 차트 1에 다가 넣고
+        // for문 돌리면 될듯 ㅇㅇ
+
+
         var num1 = this.count1.length;
         this.chart1.push(num1)
 
-        console.log(this.chart1);
+        // console.log(this.chart1);
 
         var num2 = this.count2.length;
         this.chart2.push(num2)
         
         var num3 = this.count3.length;
         this.chart3.push(num3)
+
+        console.log(this.chart1[0]); 
+
+        this.chartData.datasets[0].data.push(num1)
+        this.chartData.datasets[0].data.push(num2)
+        this.chartData.datasets[0].data.push(num3)
+        
+        console.log(this.chartData.datasets[0].data[0]);
+
     },
     mounted(){
 
@@ -136,7 +168,14 @@ export default {
 }
 </script>
 <style scoped>
-
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 
 
     

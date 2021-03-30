@@ -1,18 +1,12 @@
-# status
+git add . 
 
-> A Vue.js project
 
-## Build Setup
+git commit -m "메세지" 
 
-``` bash
-# install dependencies
-npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
 
-# build for production with minification
-npm run build
-```
+git branch -M main 
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+git push -u origin main
