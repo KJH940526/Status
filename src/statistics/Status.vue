@@ -86,7 +86,7 @@ export default {
            CCTVItmes: [], //CCTV 리스트
            UserItems: [], //User Item
 
-           //chart.js
+           //vue-chart.js
            chartOptions: {
                hoverBorderWidth: 10,
            },
@@ -141,16 +141,20 @@ export default {
         var num3 = this.count3.length;
         this.chart3.push(num3)
 
-        console.log(this.chart1[0]); 
+        // console.log(this.chart1[0]); 
 
+
+        // console.log(this.chartData.datasets[0].data[0]); //undefined
         this.chartData.datasets[0].data.push(num1)
         this.chartData.datasets[0].data.push(num2)
         this.chartData.datasets[0].data.push(num3)
         
-        console.log(this.chartData.datasets[0].data[0]);
+        // console.log(this.chartData.datasets[0].data);  
+        // console.log(this.chartData.datasets[0].data[0]);    //2
 
     },
     mounted(){
+        
 
     },
     beforeUpdate(){
@@ -166,6 +170,8 @@ export default {
 
     }
 }
+
+
 </script>
 <style scoped>
 #app {

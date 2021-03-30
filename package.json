@@ -10,6 +10,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "chart.js": "^2.9.4",
     "jquery": "^3.6.0",
     "moment": "^2.29.1",
